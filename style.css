@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#cabecalho {
+    width: 90vw;
+    height: 30vh;
+
+    margin-top: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo {
+    width: 100%;
+    height: 100%;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    margin-bottom: 10px;
+}
+
+.progresso {
+    height: 3vh;
+    width: 70%;
+    min-height: 15px;
+    border: 1px solid black;   
+}
+
+.barraMonstro {
+    background-color: green;
+    width: 50%;
+    min-height: 100%;
+    display: block;
+}
+
+.barraHumano {
+    background-color: green;
+    width: 30%;
+    min-height: 100%;
+    display: block;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+ 
+#opcoes {
+    width: 90vw;
+    height: 30vh;
+    margin-top: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+  
+}
+
+#opcoes button {
+    width: 15%;
+    min-width: 159px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+
+
+}
+
+#opcoes button:hover {
+   background-color: aqua;
+   color: white;
+   cursor: pointer;
+}
+
+#descricao {
+    width: 90vw;
+    margin-top: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: stretch;
+
+}
+
+#descricao div {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: aqua;
+    text-align: center;
+}
+
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#combos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media(max-width: 800px){
+    #opcoes{height: 30%;}
+    #combos {flex-direction: column;}
+    #combos button {max-height: 100%;}
+}

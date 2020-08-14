@@ -1,0 +1,40 @@
+<script src="https://unpkg.com/vue"></script>
+<link rel="stylesheet" href="style.css">
+
+
+
+<div id="app">
+    <header id="cabecalho">
+        <div class="conteudo">
+            <h2>Humano</h2>
+            <div class="progresso">
+                <span class="barraHumano" :style="{width: vidaJogador + '%'}"></span>
+            </div>
+            <p>{{ vidaJogador }}%</p>
+        </div>
+        <div class="conteudo">
+            <h2>Monstro</h2>
+            <div class="progresso">
+                <span class="barraMonstro" :style="{width: vidaMonstro + '%'}"></span>
+            </div>
+            <p>{{ vidaMonstro }}%</p>
+        </div>
+    </header>
+    <div id="opcoes">
+        <button @click="iniciaJogo = !iniciaJogo" v-if="!iniciaJogo">INICIAR JOGO</button>
+        <div v-else-if="iniciaJogo" id="combos">
+            <button @click="ataque">ATAQUE</button>
+            <button @click="ataqueEspecial">ATAQUE ESPECIAL</button>
+            <button @click="">CURAR</button>
+            <button @click="desistir">DESISTIR</button>
+        </div>
+    </div>
+    <footer id="descricao" v-if="iniciaJogo">
+        <div v-for="log in logs" :key="log.id">O {{ log.nome }} atacou com {{log.valor}}</div>
+    </footer>
+</div>
+<script src="app.js"></script>
+
+
+
+
